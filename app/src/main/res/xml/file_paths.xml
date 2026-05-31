@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path name="beauty_images" path="Pictures/BeautyMatch" />
+    <external-files-path name="beauty_data" path="Documents/BeautyMatch" />
+    <files-path name="internal_data" path="." />
+</paths>
