@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pastel_peach_light">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Заголовок -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Анализ тона кожи"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/charcoal" />
+
+                <ImageButton
+                    android:id="@+id/btn_help"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_search"
+                    android:background="@drawable/glass_menu_item"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Нажмите на фото, чтобы добавить точку анализа. Максимум 3 точки."
+                android:textSize="13sp"
+                android:textColor="@color/dark_gray"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Фото с точками -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="6dp"
+                android:layout_marginBottom="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="@color/black" />
+
+                    <FrameLayout
+                        android:id="@+id/points_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <!-- Подсказка на фото -->
+                    <TextView
+                        android:id="@+id/tv_photo_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Нажмите на кожу"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:background="@color/glass_white_light"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:elevation="4dp" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Панель управления точками -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_points_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/glass_white"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Точки анализа"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/charcoal" />
+
+                        <TextView
+                            android:id="@+id/tv_points_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0/3"
+                            android:textSize="14sp"
+                            android:textColor="@color/medium_gray" />
+                    </LinearLayout>
+
+                    <!-- Контейнер точек -->
+                    <LinearLayout
+                        android:id="@+id/points_list_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Быстрые области -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Быстрый выбор области"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:layout_marginBottom="10dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_area_forehead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Лоб"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/charcoal"
+                        android:background="@drawable/button_secondary"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp" />
+
+                    <Button
+                        android:id="@+id/btn_area_left_cheek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Щека Л"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/charcoal"
+                        android:background="@drawable/button_secondary"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp" />
+
+                    <Button
+                        android:id="@+id/btn_area_right_cheek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Щека П"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/charcoal"
+                        android:background="@drawable/button_secondary"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp" />
+
+                    <Button
+                        android:id="@+id/btn_area_nose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Нос"
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/charcoal"
+                        android:background="@drawable/button_secondary"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp" />
+
+                    <Button
+                        android:id="@+id/btn_area_chin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:text="Подбор."
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/charcoal"
+                        android:background="@drawable/button_secondary"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Результат анализа -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/glass_white"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Результат анализа"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/charcoal"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <View
+                            android:id="@+id/v_result_color"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:background="@drawable/circle_accent" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Средний тон кожи"
+                                android:textSize="14sp"
+                                android:textColor="@color/dark_gray" />
+
+                            <TextView
+                                android:id="@+id/tv_hex_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="#F5E6D8"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/charcoal"
+                                android:fontFamily="monospace" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Подтон:"
+                            android:textSize="14sp"
+                            android:textColor="@color/dark_gray" />
+
+                        <TextView
+                            android:id="@+id/tv_undertone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Тёплый"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/charcoal"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_undertone_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Описание подтона"
+                        android:textSize="13sp"
+                        android:textColor="@color/medium_gray"
+                        android:lineSpacingMultiplier="1.3" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Кнопки действий -->
+            <Button
+                android:id="@+id/btn_analyze"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Анализировать"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/button_primary"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btn_find_products"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Подобрать тональные средства"
+                android:textAllCaps="false"
+                android:textColor="@color/charcoal"
+                android:textSize="16sp"
+                android:background="@drawable/button_secondary"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btn_retake"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Переснять"
+                android:textAllCaps="false"
+                android:textColor="@color/medium_gray"
+                android:background="?attr/selectableItemBackground"
+                android:elevation="0dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Нижняя панель редактирования точки -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_edit_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="12dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tv_edit_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Точка 1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/charcoal" />
+
+                <ImageButton
+                    android:id="@+id/btn_close_edit"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_close"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <View
+                    android:id="@+id/edit_color_preview"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/circle_accent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_edit_hex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#F5E6D8"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/charcoal"
+                        android:fontFamily="monospace" />
+
+                    <TextView
+                        android:id="@+id/tv_edit_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Лоб"
+                        android:textSize="13sp"
+                        android:textColor="@color/medium_gray" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Переместите точку на фото или удалите"
+                android:textSize="13sp"
+                android:textColor="@color/dark_gray"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_delete_point"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Удалить"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_primary"
+                    android:drawableLeft="@drawable/ic_delete"
+                    android:paddingLeft="16dp" />
+
+                <Button
+                    android:id="@+id/btn_move_point"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Переместить"
+                    android:textAllCaps="false"
+                    android:textColor="@color/charcoal"
+                    android:background="@drawable/button_secondary"
+                    android:drawableLeft="@drawable/ic_edit"
+                    android:paddingLeft="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pastel_peach_light"
+    android:orientation="vertical">
+
+    <!-- Заголовок + кнопки -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/title_catalog"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/charcoal" />
+
+        <ImageButton
+            android:id="@+id/btn_export"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_export"
+            android:background="@drawable/glass_menu_item"
+            android:padding="10dp"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/btn_filters"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_filter"
+            android:background="@drawable/glass_menu_item"
+            android:padding="10dp"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <!-- Панель результата анализа (видима только при подборе) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/pastel_mint_light"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/tv_result_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#F5E6D8"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/charcoal"
+                android:fontFamily="monospace" />
+
+            <TextView
+                android:id="@+id/tv_result_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Подбор по тону кожи"
+                android:textSize="13sp"
+                android:textColor="@color/dark_gray"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Список -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_shades"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="20dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pastel_peach_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_settings"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/charcoal"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Камера -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/glass_white"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Камера"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/charcoal"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Вспышка -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Вспышка при сканировании"
+                            android:textSize="15sp"
+                            android:textColor="@color/charcoal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Автоматическое освещение"
+                            android:textSize="12sp"
+                            android:textColor="@color/medium_gray" />
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/switch_flash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumbTint="@color/pastel_rose"
+                        android:trackTint="@color/pastel_rose_light" />
+                </LinearLayout>
+
+                <!-- Автофокус -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Автофокус"
+                            android:textSize="15sp"
+                            android:textColor="@color/charcoal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Автоматическая фокусировка"
+                            android:textSize="12sp"
+                            android:textColor="@color/medium_gray" />
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/switch_autofocus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumbTint="@color/pastel_rose"
+                        android:trackTint="@color/pastel_rose_light" />
+                </LinearLayout>
+
+                <!-- Нормализация -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Нормализация цвета"
+                            android:textSize="15sp"
+                            android:textColor="@color/charcoal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Коррекция освещения"
+                            android:textSize="12sp"
+                            android:textColor="@color/medium_gray" />
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/switch_normalize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumbTint="@color/pastel_rose"
+                        android:trackTint="@color/pastel_rose_light" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Папки хранения -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/glass_white"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Папки хранения"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/charcoal"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Фото -->
+                <LinearLayout
+                    android:id="@+id/menu_photos_folder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/glass_menu_item"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Фотографии"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/charcoal" />
+
+                    <TextView
+                        android:id="@+id/tv_photos_path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/path/to/photos"
+                        android:textSize="11sp"
+                        android:textColor="@color/medium_gray"
+                        android:layout_marginTop="2dp"
+                        android:maxLines="1"
+                        android:ellipsize="middle" />
+                </LinearLayout>
+
+                <!-- База данных -->
+                <LinearLayout
+                    android:id="@+id/menu_database_folder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/glass_menu_item"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="База данных"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/charcoal" />
+
+                    <TextView
+                        android:id="@+id/tv_database_path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/path/to/database"
+                        android:textSize="11sp"
+                        android:textColor="@color/medium_gray"
+                        android:layout_marginTop="2dp"
+                        android:maxLines="1"
+                        android:ellipsize="middle" />
+                </LinearLayout>
+
+                <!-- Экспорт -->
+                <LinearLayout
+                    android:id="@+id/menu_export_folder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/glass_menu_item"
+                    android:padding="14dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Экспорт"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/charcoal" />
+
+                    <TextView
+                        android:id="@+id/tv_export_path"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/path/to/export"
+                        android:textSize="11sp"
+                        android:textColor="@color/medium_gray"
+                        android:layout_marginTop="2dp"
+                        android:maxLines="1"
+                        android:ellipsize="middle" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Статистика -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/glass_white"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Статистика"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/charcoal"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_stats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Загрузка..."
+                    android:textSize="13sp"
+                    android:textColor="@color/dark_gray"
+                    android:lineSpacingMultiplier="1.3" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Кнопки действий -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btn_reset_paths"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Сброс папок"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary"
+                android:elevation="0dp" />
+
+            <Button
+                android:id="@+id/btn_clear_cache"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Очистить"
+                android:textAllCaps="false"
+                android:textColor="@color/charcoal"
+                android:background="@drawable/button_secondary"
+                android:elevation="0dp" />
+
+            <Button
+                android:id="@+id/btn_export_db"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Экспорт БД"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary"
+                android:elevation="0dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

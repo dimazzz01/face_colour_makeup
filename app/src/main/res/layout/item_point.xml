@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/point_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="12dp"
+    android:background="@drawable/glass_menu_item"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <View
+        android:id="@+id/point_color"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="@drawable/circle_accent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
+
+        <TextView
+            android:id="@+id/point_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Точка 1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/charcoal" />
+
+        <TextView
+            android:id="@+id/point_hex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#F5E6D8"
+            android:textSize="12sp"
+            android:textColor="@color/medium_gray"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/point_selected_indicator"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_done"
+        android:visibility="gone" />
+
+</LinearLayout>
