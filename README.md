@@ -127,7 +127,6 @@ app/src/main/java/com/beauty/match/
    git clone https://github.com/yourusername/BeautyMatch.git
    cd BeautyMatch
 ```
-
 2. Откройте проект в Android Studio (рекомендуется Arctic Fox или новее)
 3. Соберите APK
    · Подключите Android-устройство или эмулятор с API 26+
