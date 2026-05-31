@@ -1,4 +1,3 @@
-```markdown
 # BeautyMatch — Подбор тонального крема и пудры по тону кожи
 
 [![Android](https://img.shields.io/badge/Android-8.0%2B-brightgreen)](https://developer.android.com)
@@ -216,5 +215,3 @@ GitHub: https://github.com/dimazzz01
 
 Если у вас есть вопросы или предложения, создавайте Issue или пишите на почту.
 ⭐ Не забудьте поставить звезду, если проект оказался полезным!
-
-```
