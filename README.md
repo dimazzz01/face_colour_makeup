@@ -106,9 +106,9 @@ app/src/main/java/com/beauty/match/
 │   ├── Product.java
 │   └── Shade.java
 └── utils/
-├── ColorUtils.java                  # Расстояние между цветами, подтон, нормализация
-├── ImageUtils.java                  # Поворот, отражение, сохранение Bitmap
-└── StorageUtils.java                # Работа с папками, размер, копирование
+    ├── ColorUtils.java                  # Расстояние между цветами, подтон, нормализация
+    ├── ImageUtils.java                  # Поворот, отражение, сохранение Bitmap
+    └── StorageUtils.java                # Работа с папками, размер, копирование
 
 ```
 
