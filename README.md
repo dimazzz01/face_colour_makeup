@@ -125,8 +125,8 @@ app/src/main/java/com/beauty/match/
 
 1. **Клонируйте репозиторий**
 ```bash
-   git clone https://github.com/yourusername/BeautyMatch.git
-   cd BeautyMatch
+   git clone https://github.com/dimazzz01/face_colour_makwup.git
+   cd face_colour_makeup
 ```
 2. Откройте проект в Android Studio (рекомендуется Arctic Fox или новее)
 3. Соберите APK
