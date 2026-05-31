@@ -210,7 +210,7 @@ SOFTWARE.
 
 ---
 
-Автор: dimazzz, KsandrSkif 
+Авторы: dimazzz, KsandrSkif 
 
 GitHub: https://github.com/dimazzz01
 
