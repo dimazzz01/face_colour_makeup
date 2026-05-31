@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BeautyMatch" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/pastel_rose</item>
+        <item name="colorPrimaryDark">@color/pastel_rose_dark</item>
+        <item name="colorAccent">@color/pastel_mint</item>
+        
+        <item name="android:windowBackground">@color/off_white</item>
+        <item name="android:statusBarColor">@color/pastel_rose</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        
+        <item name="android:textColorPrimary">@color/charcoal</item>
+        <item name="android:textColorSecondary">@color/dark_gray</item>
+        
+        <!-- Скругления по умолчанию -->
+        <item name="cardCornerRadius">24dp</item>
+    </style>
+    
+    <style name="Theme.BeautyMatch.Dialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/pastel_rose</item>
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+    </style>
+</resources>

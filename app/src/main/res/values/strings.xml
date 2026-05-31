@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BeautyMatch</string>
+    <string name="app_subtitle">Подбор тонального крема и пудры</string>
+    
+    <string name="menu_scan">Сканировать кожу</string>
+    <string name="menu_scan_desc">Определите тон с помощью камеры</string>
+    <string name="menu_catalog">Каталог оттенков</string>
+    <string name="menu_catalog_desc">Базы данных производителей</string>
+    <string name="menu_filter">Фильтры</string>
+    <string name="menu_filter_desc">Поиск по брендам и типам</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="menu_settings_desc">Папки, камера, параметры</string>
+    
+    <string name="version_info">BeautyMatch v1.0 • Учебный проект</string>
+    
+    <!-- Кнопки общие -->
+    <string name="btn_next">Далее</string>
+    <string name="btn_back">Назад</string>
+    <string name="btn_save">Сохранить</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="btn_apply">Применить</string>
+    
+    <!-- Заголовки активити -->
+    <string name="title_camera">Анализ тона кожи</string>
+    <string name="title_results">Результаты подбора</string>
+    <string name="title_catalog">Каталог продуктов</string>
+    <string name="title_filter">Фильтры</string>
+    <string name="title_settings">Настройки</string>
+    
+    <!-- Подсказки -->
+    <string name="hint_select_area">Выберите область лица для анализа</string>
+    <string name="hint_lighting">Убедитесь, что освещение равномерное</string>
+	<string name="title_analysis">Анализ тона кожи</string>
+    <string name="hint_face_position">Поместите лицо в овал</string>
+    <string name="hint_tap_face">Нажмите на фото в области чистой кожи или используйте быстрые кнопки</string>
+	<string name="title_filters">Фильтры</string>
+
+</resources>

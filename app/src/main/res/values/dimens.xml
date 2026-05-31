@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marker_size">28dp</dimen>
+    <dimen name="color_circle_size">36dp</dimen>
+    <dimen name="card_radius">24dp</dimen>
+</resources>

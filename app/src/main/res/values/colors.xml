@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основные пастельные -->
+    <color name="pastel_rose">#D4A5A5</color>
+    <color name="pastel_mint">#A8D5BA</color>
+    <color name="pastel_peach">#F5E6D3</color>
+    
+    <!-- Оттенки для UI -->
+    <color name="pastel_rose_dark">#B88989</color>
+    <color name="pastel_mint_dark">#8BC4A0</color>
+    <color name="pastel_peach_dark">#E8D4C0</color>
+    
+    <color name="pastel_rose_light">#E8CFCF</color>
+    <color name="pastel_mint_light">#C5E8D1</color>
+    <color name="pastel_peach_light">#FAF0E6</color>
+    
+    <!-- Нейтральные -->
+    <color name="white">#FFFFFF</color>
+    <color name="off_white">#FAFAFA</color>
+    <color name="light_gray">#F0F0F0</color>
+    <color name="medium_gray">#9E9E9E</color>
+    <color name="dark_gray">#616161</color>
+    <color name="charcoal">#2D2D2D</color>
+    <color name="black">#000000</color>
+    
+    <!-- Glass эффекты -->
+    <color name="glass_white">#80FFFFFF</color>
+    <color name="glass_white_light">#40FFFFFF</color>
+    <color name="glass_border">#30FFFFFF</color>
+    <color name="glass_shadow">#15000000</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+</resources>
