@@ -212,7 +212,7 @@ SOFTWARE.
 ---
 
 Автор: dimazzz, KsandrSkif 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/dimazzz01
 
 Если у вас есть вопросы или предложения, создавайте Issue или пишите на почту.
 ⭐ Не забудьте поставить звезду, если проект оказался полезным!
