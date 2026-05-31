@@ -211,6 +211,7 @@ SOFTWARE.
 ---
 
 Автор: dimazzz, KsandrSkif 
+
 GitHub: https://github.com/dimazzz01
 
 Если у вас есть вопросы или предложения, создавайте Issue или пишите на почту.
