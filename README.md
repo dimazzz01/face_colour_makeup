@@ -124,7 +124,7 @@ app/src/main/java/com/beauty/match/
 
 ```
 1. **Клонируйте репозиторий**
-   ```bash
+   ```
    git clone https://github.com/yourusername/BeautyMatch.git
    cd BeautyMatch
 ```
