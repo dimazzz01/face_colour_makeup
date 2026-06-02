@@ -212,7 +212,7 @@ SOFTWARE.
 ---
 
 Авторы: dimazzz, KsandrSkif 
-[![KsandrSkif]](https://github.com/KsandrSkif)
+[![KsandrSkif](https://img.shields.io/badge/Android-8.0%2B-brightgreen)](https://github.com/KsandrSkif)
 
 GitHub: https://github.com/dimazzz01
 
