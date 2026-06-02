@@ -212,6 +212,7 @@ SOFTWARE.
 ---
 
 Авторы: dimazzz, KsandrSkif 
+[![KsandrSkif]](https://github.com/KsandrSkif)
 
 GitHub: https://github.com/dimazzz01
 
